@@ -5,8 +5,8 @@ port.onMessage.addListener(function (message) {
 });
 
 window.addEventListener('message', function (event) {
-    if( event.data === 'check-addon-installed' ) {
-        window.postMessage( 'addon-installed', '*' );
+    if( event.data === 'takhshila-check-addon-installed' ) {
+        window.postMessage( 'takhshila-addon-installed', '*' );
     } else if (event.source === window) {
         port.postMessage( event.data );
     }

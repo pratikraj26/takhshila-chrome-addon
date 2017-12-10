@@ -1,10 +1,10 @@
 {
     "name" : "Takhshila Screen Sharing",
     "author": "Pratik Raj",
-    "version" : "1.0",
+    "version" : "1.1",
     "manifest_version" : 2,
     "minimum_chrome_version": "34",
-    "description" : "Capture full-screen or specific application's screen on any HTTPs domain!",
+    "description" : "Share the screen from your computer during a live class on takhshila to show presentations or documents!",
     "homepage_url": "https://www.takhshila.com/",
     "background": {
         "scripts": ["background-script.js"],
@@ -13,10 +13,11 @@
     "content_scripts": [ {
        "js": [ "content-script.js" ],
        "all_frames": true,
-       "run_at": "document_start"
+       "run_at": "document_start",
+       "matches": ["<all_urls>"]
     }],
     "icons" : {
-        "48" : "icon.png"
+        "48" : "icon-new.png"
     },
     "permissions": [
         "desktopCapture"
